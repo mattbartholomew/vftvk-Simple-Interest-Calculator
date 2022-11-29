@@ -7,6 +7,10 @@ function compute()
     var amount=interest+principal;
     var year=new Date().getFullYear()+parseInt(years); 
     //p = document.getElementById("principal").value;
+    if (principal<=0) {
+        alert("Enter a positive number");
+        alert.focus(document.getElementById("principal"));
+    }
     document.getElementById("result").innerHTML="If you deposit "+principal+",\<br\>at an interest rate of "+rate+"%\<br\>You will receive an amount of "+amount+",\<br\>in the year "+year+"\<br\>"
 }
 function updateRate() 
